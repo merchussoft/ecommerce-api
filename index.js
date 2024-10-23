@@ -1,3 +1,10 @@
+const { createPathEnv, nodeEnv } = require('./src/App/Config/Config');
+
+require('dotenv').config({
+	path: createPathEnv(nodeEnv())
+})
+
+
 const app = require('./src/app');
 const fs = require('fs');
 const path = require('path');
