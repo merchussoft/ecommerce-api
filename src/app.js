@@ -1,13 +1,14 @@
 const express = require('express');
 const cors = require('cors');
-const mg = require('morgan')
+const mg = require('morgan');
+const { getNumberEnv } = require('./App/Config/Config');
 
 
 const app = express();
 
 
 
-app.set('port', process.env.PORT || 3018);
+app.set('port', getNumberEnv('PORT'));
 
 app.use(cors());
 app.use(mg('dev'));

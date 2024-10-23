@@ -22,7 +22,6 @@ fs.readdirSync(route_path).forEach((file) => {
         const route = require(path.join(route_path, file));
         const route_name = file.replace('.js', '');
         app.use(`/${route_name}`, route);
-        console.log(`Ruta cargada: /${route_name}`)
     }
 })
 

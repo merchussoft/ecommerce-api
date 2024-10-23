@@ -27,7 +27,8 @@ const pgConfig = () => {
         user: getEnvironment('DB_USER'),
         password: getEnvironment('DB_PASS'),
         database: getEnvironment('DB_NAME'),
-        port: getEnvironment('DB_PORT')
+        port: getEnvironment('DB_PORT'),
+        //ssl: getEnvironment('DB_SSL') === 'true' ? { rejectUnauthorized: false } : false // Si usas SSL
     }
 }
 
